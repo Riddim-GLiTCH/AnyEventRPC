@@ -28,7 +28,7 @@ npm install discord-rpc
 - Make sure the application is named "the waiting game".
 - Under "Rich Presence", click on "Art Assets" and upload the `totk.png` and `clock.png` files from the `assets` folder.
 - Note down the "Client ID" at the top of the page.
-5. Replace the `clientId` variable in `index.js` with the client ID you just noted down.
+5. Replace the `clientId` variable in `RPC.js` with the client ID you just noted down.
 6. Run the program by executing the following command:
 
 ```
