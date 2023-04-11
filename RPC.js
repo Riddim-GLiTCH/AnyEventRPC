@@ -1,5 +1,5 @@
 const DiscordRPC = require('discord-rpc');
-const clientId = '1092849367251169301';
+const clientId = 'CLIENT ID HERE';
 
 // Calculate the time left until May 12th, 2023 at 12:00 PM
 const countdownDate = new Date('2023-05-12T12:00:00');
@@ -15,11 +15,14 @@ const rpc = new DiscordRPC.Client({
 
 function setRPC() {
     rpc.setActivity({
-        details: `Only ${timeLeftInDays} days left!`,
+        details: `Waiting for Tears of the Kingdom...`,
+        state: `Only ${timeLeftInDays} days left!`,
         largeImageKey: 'totk',
         largeImageText: 'Tears of the Kingdom',
         smallImageKey: 'clock',
         smallImageText: `Time left: ${timeLeftInDays} days`,
+        startTimestamp: Math.floor(currentDate.getTime() / 1000),
+        endTimestamp: Math.floor(countdownDate.getTime() / 1000),
         buttons: [
             { label: 'Watch the Countdown', url: 'https://www.timeanddate.com/countdown/generic?iso=20230512T00&p0=1309&msg=Time+until+Tears+of+the+Kingdom+releases...&ud=1&font=slab&csz=1#' }
           ]
