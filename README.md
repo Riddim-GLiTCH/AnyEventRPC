@@ -1,12 +1,15 @@
 # TOTK Countdown RPC
 
 This is a Discord Rich Presence client that displays the time left until the release of Tears of the Kingdom.
+![Preview-1](https://user-images.githubusercontent.com/87764384/231173107-2a5e01e8-1a9f-4743-bc8c-034a35287fe6.png)
+![preview-1](https://user-images.githubusercontent.com/87764384/231172907-99424b50-f548-49ed-9671-df2a6946b07e.png)
 
 ## Prerequisites
 
 Before you can run this program, you need to have the following installed:
 
 - [Node.js](https://nodejs.org/en/) (v14.0.0 or later)
+
 
 ## Installation
 
