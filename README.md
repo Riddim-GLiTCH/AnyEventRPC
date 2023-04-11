@@ -36,3 +36,15 @@ node rpc.js
 ```
 
 That's it! The TOTK Countdown RPC should now be running and displaying your Rich Presence status in Discord.
+
+
+## Credits:
+
+This project was created with the help of [ChatGPT](https://openai.com/blog/chatgpt), a language model trained by [OpenAI](https://openai.com/). Special thanks to ChatGPT for providing guidance and assistance in understanding and creating the code.
+
+Additionally, thanks to the following resources:
+
+- [Discord Developer Portal](https://discord.com/developers/docs/intro) for information on setting up Discord Rich Presence
+- [npm](https://www.npmjs.com/) for the `discord-rpc` module used in this project
+- [GitHub](https://github.com/) for hosting this project
+- [Nintendo](https://www.nintendo.com/) for a legenedary up-and-coming Zelda title.
