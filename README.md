@@ -40,7 +40,7 @@ That's it! The TOTK Countdown RPC should now be running and displaying your Rich
 
 ## Credits:
 
-Huge shoutout to [EnK_](https://www.github.com/EnKdev/) for refactoring the code! They managed to reduce the code to about 37 lines, whereas before it used 42!
+Huge shoutout to [EnK_](https://www.github.com/EnKdev/) for refactoring the code! The amount of bloat this code had was real before they went over it entirely.
 
 Additionally, thanks to the following resources:
 - [OpenAI](https://openai.com/) For offering help writing and understanding the original code through the use of [ChatGPT](https://openai.com/blog/chatgpt)
