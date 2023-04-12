@@ -5,6 +5,9 @@ const client = require('discord-rich-presence')(clientId);
 // Set up the target date and get the respective time.
 let targetDate = new Date("May 12, 2023 12:00:00").getTime()
 
+// Print confirmation message
+console.log("RPC is running! Just sit back and relax...");
+
 // Initiate the update function
 let update = setInterval(function() {
     let currentDate = new Date().getTime();
@@ -20,18 +23,22 @@ let update = setInterval(function() {
 }, 1000);
 
 function setRpc(days, hours, minutes) {
-    client.updatePresence({
-        details: "Waiting for Tears of the Kingdom...",
-        state: `${days}d ${hours}h ${minutes}m left!`,
-        largeImageKey: "totk",
-        largeImageText: "Tears of the Kingdom",
-        smallImageKey: "clock",
-        smallImageText: `Time left: ${days}d ${hours}h ${minutes}m`,
-        buttons: [
-            {
-                label: "Watch the countdown",
-                url: "https://www.timeanddate.com/countdown/generic?iso=20230512T00&p0=1309&msg=Time+until+Tears+of+the+Kingdom+releases...&ud=1&font=slab&csz=1#"
-            }
-        ]
-    });
+    try {
+        client.updatePresence({
+            details: "Waiting for Tears of the Kingdom...",
+            state: `${days}d ${hours}h ${minutes}m left!`,
+            largeImageKey: "totk",
+            largeImageText: "Tears of the Kingdom",
+            smallImageKey: "clock",
+            smallImageText: `Time left: ${days}d ${hours}h ${minutes}m`,
+            buttons: [
+                {
+                    label: "Watch the countdown",
+                    url: "https://www.timeanddate.com/countdown/generic?iso=20230512T00&p0=1309&msg=Time+until+Tears+of+the+Kingdom+releases...&ud=1&font=slab&csz=1#"
+                }
+            ]
+        });
+    } catch (error) {
+        console.error(error);
+    }
 }
