@@ -18,7 +18,7 @@ Before you can run this program, you need to have the following installed:
 3. Install the required dependencies by running the following command:
 
 ```
-npm install discord-rpc
+npm install discord-rich-presence
 ```
 
 4. Set up the Discord application by following these steps:
@@ -28,7 +28,7 @@ npm install discord-rpc
 - Make sure the application is named "the waiting game".
 - Under "Rich Presence", click on "Art Assets" and upload the `totk.png` and `clock.png` files from the `assets` folder.
 - Note down the "Client ID" at the top of the page.
-5. Replace the `clientId` variable in `RPC.js` with the client ID you just noted down.
+5. Replace the `clientId` variable in `config.json`, which is stored in the `assets` folder with the client ID you just noted down.
 6. Run the program by executing the following command:
 
 ```
@@ -40,11 +40,12 @@ That's it! The TOTK Countdown RPC should now be running and displaying your Rich
 
 ## Credits:
 
-This project was created with the help of [ChatGPT](https://openai.com/blog/chatgpt), a language model trained by [OpenAI](https://openai.com/). Special thanks to ChatGPT for providing guidance and assistance in understanding and creating the code.
+Huge shoutout to [EnK_](https://www.github.com/EnKdev/) for refactoring the code! They managed to reduce the code to about 37 lines, whereas before it used 42!
 
 Additionally, thanks to the following resources:
-
+- [OpenAI](https://openai.com/) For offering help writing and understanding the original code through the use of [ChatGPT](https://openai.com/blog/chatgpt)
 - [Discord Developer Portal](https://discord.com/developers/docs/intro) for information on setting up Discord Rich Presence
-- [npm](https://www.npmjs.com/) for the `discord-rpc` module used in this project
+- [npm](https://www.npmjs.com/) for the `discord-rpc` module, used in a previous version of this project
+- [npm](https://www.npmjs.com/) for the `discord-rich-presence` module used in this project
 - [GitHub](https://github.com/) for hosting this project
 - [Nintendo](https://www.nintendo.com/) for a legenedary up-and-coming Zelda title.
