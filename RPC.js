@@ -15,7 +15,7 @@ let update = setInterval(function() {
     let hours = Math.floor((timeUntil % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     let minutes = Math.floor((timeUntil % (1000 * 60 * 60)) / (1000 * 60));
 
-    console.log(`${days}d ${hours}h ${minutes}m`);
+    // console.log(`${days}d ${hours}h ${minutes}m`);
     setRpc(days, hours, minutes);
 }, 1000);
 
