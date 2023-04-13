@@ -29,7 +29,8 @@ npm install discord-rich-presence
 - Under "Rich Presence", click on "Art Assets" and upload the `totk.png` and `clock.png` files from the `assets` folder.
 - Note down the "Client ID" at the top of the page.
 5. Replace the `clientId` variable in `config.json`, which is stored in the `assets` folder with the client ID you just noted down.
-6. Run the program by executing the following command:
+6. Set the format of the remaining time as you wish. Look down below for more information on available formats.
+7. Run the program by executing the following command:
 
 ```
 node rpc.js
@@ -37,6 +38,16 @@ node rpc.js
 
 That's it! The TOTK Countdown RPC should now be running and displaying your Rich Presence status in Discord.
 
+## Available Formats
+
+TOTK-Countdown-RPC supports a few formats to display the remaining time as.
+See the list below for info:
+
+- `default` -> Displays the remainder as `20d 22h 13m 49s`
+- `segmented` -> Displays the remainder as `20:22:13:49`
+- `segmented2` -> Displays the remainder as `20d:22h:13m:49s`
+- `segmented3` -> Displays the remainder as `20-22-13-49`
+- `written` -> Displays the remainder as `20 days, 22 hours, 13 minutes & 49 seconds` (needs test)
 
 ## Credits:
 

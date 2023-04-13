@@ -1,5 +1,6 @@
 const clientConfig = require('./assets/config.json');
 const clientId = `${clientConfig.clientId}`;
+const clientFormat = `${clientConfig.format}`;
 const client = require('discord-rich-presence')(clientId);
 
 // Set up the target date and get the respective time.
@@ -25,20 +26,82 @@ let update = setInterval(function() {
 
 function setRpc(days, hours, minutes, seconds) {
     try {
-        client.updatePresence({
-            details: "Waiting for Tears of the Kingdom...",
-            state: `${days}d ${hours}h ${minutes}m ${seconds}s left!`,
-            largeImageKey: "totk",
-            largeImageText: "Tears of the Kingdom",
-            smallImageKey: "clock",
-            smallImageText: `Time left: ${days}d ${hours}h ${minutes}m `,
-            buttons: [
-                {
-                    label: "Watch the countdown",
-                    url: "https://www.timeanddate.com/countdown/generic?iso=20230512T00&p0=1309&msg=Time+until+Tears+of+the+Kingdom+releases...&ud=1&font=slab&csz=1#"
-                }
-            ]
-        });
+        if (clientFormat === "segmented") {
+            client.updatePresence({
+                details: "Waiting for Tears of the Kingdom...",
+                state: `${days}:${hours}:${minutes}:${seconds} left!`,
+                largeImageKey: "totk",
+                largeImageText: "Tears of the Kingdom",
+                smallImageKey: "clock",
+                smallImageText: `Time left: ${days}:${hours}:${minutes}`,
+                buttons: [
+                    {
+                        label: "Watch the countdown",
+                        url: "https://www.timeanddate.com/countdown/generic?iso=20230512T00&p0=1309&msg=Time+until+Tears+of+the+Kingdom+releases...&ud=1&font=slab&csz=1#"
+                    }
+                ]
+            });
+        } else if (clientFormat === "segmented2") {
+            client.updatePresence({
+                details: "Waiting for Tears of the Kingdom...",
+                state: `${days}d:${hours}h:${minutes}m:${seconds}s left!`,
+                largeImageKey: "totk",
+                largeImageText: "Tears of the Kingdom",
+                smallImageKey: "clock",
+                smallImageText: `Time left: ${days}d:${hours}h${minutes}m`,
+                buttons: [
+                    {
+                        label: "Watch the countdown",
+                        url: "https://www.timeanddate.com/countdown/generic?iso=20230512T00&p0=1309&msg=Time+until+Tears+of+the+Kingdom+releases...&ud=1&font=slab&csz=1#"
+                    }
+                ]
+            });
+        } else if (clientFormat === "segmented3") {
+            client.updatePresence({
+                details: "Waiting for Tears of the Kingdom...",
+                state: `${days}-${hours}-${minutes}-${seconds} left!`,
+                largeImageKey: "totk",
+                largeImageText: "Tears of the Kingdom",
+                smallImageKey: "clock",
+                smallImageText: `Time left: ${days}-${hours}-${minutes}m`,
+                buttons: [
+                    {
+                        label: "Watch the countdown",
+                        url: "https://www.timeanddate.com/countdown/generic?iso=20230512T00&p0=1309&msg=Time+until+Tears+of+the+Kingdom+releases...&ud=1&font=slab&csz=1#"
+                    }
+                ]
+            });
+        } else if (clientFormat === "written") {
+            client.updatePresence({
+                details: "Waiting for Tears of the Kingdom...",
+                state: `${days} days, ${hours} hours, ${minutes} minutes & ${seconds} seconds left!`,
+                largeImageKey: "totk",
+                largeImageText: "Tears of the Kingdom",
+                smallImageKey: "clock",
+                smallImageText: `Time left: ${days} days, ${hours} hours & ${minutes} minutes`,
+                buttons: [
+                    {
+                        label: "Watch the countdown",
+                        url: "https://www.timeanddate.com/countdown/generic?iso=20230512T00&p0=1309&msg=Time+until+Tears+of+the+Kingdom+releases...&ud=1&font=slab&csz=1#"
+                    }
+                ]
+            });
+        } else {
+            client.updatePresence({
+                details: "Waiting for Tears of the Kingdom...",
+                state: `${days}d ${hours}h ${minutes}m ${seconds}s left!`,
+                largeImageKey: "totk",
+                largeImageText: "Tears of the Kingdom",
+                smallImageKey: "clock",
+                smallImageText: `Time left: ${days}d ${hours}h ${minutes}m `,
+                buttons: [
+                    {
+                        label: "Watch the countdown",
+                        url: "https://www.timeanddate.com/countdown/generic?iso=20230512T00&p0=1309&msg=Time+until+Tears+of+the+Kingdom+releases...&ud=1&font=slab&csz=1#"
+                    }
+                ]
+            });
+        }
     } catch (error) {
         console.error(error);
     }
