@@ -71,6 +71,21 @@ function setRpc(days, hours, minutes, seconds) {
                     }
                 ]
             });
+        } else if (clientFormat === "dayFocused") {
+            client.updatePresence({
+                details: "Waiting for Tears of the Kingdom...",
+                state: `Only ${days} days left!`,
+                largeImageKey: "totk",
+                largeImageText: "Tears of the Kingdom",
+                smallImageKey: "clock",
+                smallImageText: `Time left: ${days} days`,
+                buttons: [
+                    {
+                        label: "Watch the countdown",
+                        url: "https://www.timeanddate.com/countdown/generic?iso=20230512T00&p0=1309&msg=Time+until+Tears+of+the+Kingdom+releases...&ud=1&font=slab&csz=1#"
+                    }
+                ]
+            });
         } else {
             client.updatePresence({
                 details: "Waiting for Tears of the Kingdom...",

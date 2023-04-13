@@ -47,6 +47,7 @@ See the list below for info:
 - `segmented` -> Displays the remainder as `20:22:13:49`
 - `segmented2` -> Displays the remainder as `20d:22h:13m:49s`
 - `segmented3` -> Displays the remainder as `20-22-13-49`
+- `dayFocused` -> Displays the remainder as `Only 20 days left!`
 
 ## Credits:
 
