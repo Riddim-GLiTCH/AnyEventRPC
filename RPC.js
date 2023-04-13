@@ -48,7 +48,7 @@ function setRpc(days, hours, minutes, seconds) {
                 largeImageKey: "totk",
                 largeImageText: "Tears of the Kingdom",
                 smallImageKey: "clock",
-                smallImageText: `Time left: ${days}d:${hours}h${minutes}m`,
+                smallImageText: `Time left: ${days}d:${hours}h:${minutes}m`,
                 buttons: [
                     {
                         label: "Watch the countdown",
@@ -63,22 +63,7 @@ function setRpc(days, hours, minutes, seconds) {
                 largeImageKey: "totk",
                 largeImageText: "Tears of the Kingdom",
                 smallImageKey: "clock",
-                smallImageText: `Time left: ${days}-${hours}-${minutes}m`,
-                buttons: [
-                    {
-                        label: "Watch the countdown",
-                        url: "https://www.timeanddate.com/countdown/generic?iso=20230512T00&p0=1309&msg=Time+until+Tears+of+the+Kingdom+releases...&ud=1&font=slab&csz=1#"
-                    }
-                ]
-            });
-        } else if (clientFormat === "written") {
-            client.updatePresence({
-                details: "Waiting for Tears of the Kingdom...",
-                state: `${days} days, ${hours} hours, ${minutes} minutes & ${seconds} seconds left!`,
-                largeImageKey: "totk",
-                largeImageText: "Tears of the Kingdom",
-                smallImageKey: "clock",
-                smallImageText: `Time left: ${days} days, ${hours} hours & ${minutes} minutes`,
+                smallImageText: `Time left: ${days}-${hours}-${minutes}`,
                 buttons: [
                     {
                         label: "Watch the countdown",
