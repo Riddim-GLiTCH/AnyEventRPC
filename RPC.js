@@ -17,20 +17,21 @@ let update = setInterval(function() {
     let days = Math.floor(timeUntil / (1000 * 60 * 60 * 24));
     let hours = Math.floor((timeUntil % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     let minutes = Math.floor((timeUntil % (1000 * 60 * 60)) / (1000 * 60));
+    let seconds = Math.floor((timeUntil % (1000 * 60)) / 1000);
 
     // console.log(`${days}d ${hours}h ${minutes}m`);
-    setRpc(days, hours, minutes);
+    setRpc(days, hours, minutes, seconds);
 }, 1000);
 
-function setRpc(days, hours, minutes) {
+function setRpc(days, hours, minutes, seconds) {
     try {
         client.updatePresence({
             details: "Waiting for Tears of the Kingdom...",
-            state: `${days}d ${hours}h ${minutes}m left!`,
+            state: `${days}d ${hours}h ${minutes}m ${seconds}s left!`,
             largeImageKey: "totk",
             largeImageText: "Tears of the Kingdom",
             smallImageKey: "clock",
-            smallImageText: `Time left: ${days}d ${hours}h ${minutes}m`,
+            smallImageText: `Time left: ${days}d ${hours}h ${minutes}m `,
             buttons: [
                 {
                     label: "Watch the countdown",
