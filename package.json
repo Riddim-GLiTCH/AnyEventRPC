@@ -1,7 +1,10 @@
 {
-  "name": "totk-countdown-rpc",
-  "version": "1.2.0",
+  "name": "anyeventrpc",
+  "version": "2.0.0",
   "dependencies": {
     "discord-rich-presence": "^0.0.8"
+  },
+  "scripts": {
+    "start": "node RPC.js"
   }
 }
