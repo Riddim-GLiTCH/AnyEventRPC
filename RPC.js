@@ -19,7 +19,7 @@ let update = setInterval(function() {
    let seconds = Math.floor((timeUntil % (1000 * 60)) / 1000);
 
    setRpc(days, hours, minutes, seconds);
-}, 60 * 1000);
+}, 1000);
 
 function setRpc(days, hours, minutes, seconds) {
     try {
