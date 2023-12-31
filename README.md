@@ -1,8 +1,9 @@
-# TOTK Countdown RPC
+# AnyEventRPC
 
-This is a Discord Rich Presence client that displays the time left until the release of Tears of the Kingdom.
-![Preview-1](https://user-images.githubusercontent.com/87764384/231173107-2a5e01e8-1a9f-4743-bc8c-034a35287fe6.png)
-![preview-1](https://user-images.githubusercontent.com/87764384/231172907-99424b50-f548-49ed-9671-df2a6946b07e.png)
+This is a Discord Rich Presence client that displays the time left until an event specified by a user is happening.
+![preview1](https://github.com/Riddim-GLiTCH/AnyEventRPC/assets/46762556/a749d02c-d367-44c1-b45c-b4504b89dba4)
+![preview2](https://github.com/Riddim-GLiTCH/AnyEventRPC/assets/46762556/e717dcd9-396b-4517-b21d-75a5366464c8)
+
 
 ## Prerequisites
 
@@ -25,38 +26,35 @@ npm install discord-rich-presence
 - Go to the [Discord Developer Portal](https://discord.com/developers/applications).
 - Click on "New Application" and give it a name.
 - Click on "Create" to create the application.
-- Make sure the application is named "the waiting game".
-- Under "Rich Presence", click on "Art Assets" and upload the `totk.png` and `clock.png` files from the `assets` folder.
-- Note down the "Client ID" at the top of the page.
-5. Replace the `clientId` variable in `config.json`, which is stored in the `assets` folder with the client ID you just noted down.
+- Make sure the application is named "AnyEventRPC" or "AnyEventRpc". 
+- Under "Rich Presence", click on "Art Assets" and upload every asset you find inside the `assets` folder. (Except for the config.json)
+- Note down the "Application ID" inside the first tab of the "Settings" category.
+5. Replace the `clientId` variable in `config.json`, which is stored in the `assets` folder with the Application ID you just noted down.
 6. Set the format of the remaining time as you wish. Look down below for more information on available formats.
 7. Run the program by executing the following command:
 
 ```
-node rpc.js
+node RPC.js
 ```
 
-That's it! The TOTK Countdown RPC should now be running and displaying your Rich Presence status in Discord.
+That's it! The AnyEventRPC should now be running and displaying your Rich Presence status in Discord.
 
 ## Available Formats
 
-TOTK-Countdown-RPC supports a few formats to display the remaining time as.
+AnyEventRPC supports a few formats to display the remaining time as.
 See the list below for info:
 
-- `default` -> Displays the remainder as `20d 22h 13m 49s`
-- `segmented` -> Displays the remainder as `20:22:13:49`
-- `segmented2` -> Displays the remainder as `20d:22h:13m:49s`
-- `segmented3` -> Displays the remainder as `20-22-13-49`
+- `default` -> Displays the remainder as `20d 22h 13m`
+- `segmented` -> Displays the remainder as `20:22:13`
+- `segmented2` -> Displays the remainder as `20d:22h:13m`
+- `segmented3` -> Displays the remainder as `20d-22h-13m`
 - `dayFocused` -> Displays the remainder as `Only 20 days left!`
 
-## Credits:
+## Available Image Keys
 
-Huge shoutout to [EnK_](https://www.github.com/EnKdev/) for refactoring the code! The amount of bloat this code had was real before they went over it entirely.
+Since there are a multitude of events that can happen, AnyEventRPC comes with three default images.
+See the following list for info:
 
-Additionally, thanks to the following resources:
-- [OpenAI](https://openai.com/) For offering help writing and understanding the original code through the use of [ChatGPT](https://openai.com/blog/chatgpt)
-- [Discord Developer Portal](https://discord.com/developers/docs/intro) for information on setting up Discord Rich Presence
-- [npm](https://www.npmjs.com/) for the `discord-rpc` module, used in a previous version of this project
-- [npm](https://www.npmjs.com/) for the `discord-rich-presence` module used in this project
-- [GitHub](https://github.com/) for hosting this project
-- [Nintendo](https://www.nintendo.com/) for a legenedary up-and-coming Zelda title.
+- `fireworks` -> A celebration is happening! Woo, fireworks!
+- `birthday` -> Happy birthday to you! Happy birthday to you!
+- `unknown` -> Any other event that does not fit under currently existing categories.
