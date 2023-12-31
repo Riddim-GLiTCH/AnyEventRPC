@@ -1,4 +1,9 @@
 {
   "clientId": "",
-  "format": "default"
+  "format": "default",
+  "imageKey": "",
+  "eventDate": "",
+  "eventDetails": "",
+  "label": "",
+  "url": ""
 }
